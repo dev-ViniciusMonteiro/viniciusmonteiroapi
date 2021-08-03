@@ -1,5 +1,7 @@
+require('dotenv').config()
 const express = require('express')
-const porta = 3000
+
+const port = process.env.PORT
 
 
 const app = express()
@@ -11,4 +13,8 @@ app.get('/social', (req, res) => { return res.status(400).json({ Facebook: 'http
 
 app.get('/image/perfil', (req, res) => res.status(400).json({ image: "https://media.discordapp.net/attachments/796490440429404192/872175099636240435/eu.jpg?width=594&height=594" }))
 
-app.listen(porta, (req, res) => { console.log("API rodando na porta:" + porta) })
+app.get('/', (req, res) => res.json({ image: "Ola Mundo" }))
+
+
+
+app.listen(port, (req, res) => { console.log("API rodando na porta:" + port) })

@@ -14,7 +14,7 @@ app.get('/social', (req, res) => { return res.status(200).json({ Facebook: 'http
 
 app.get('/image/perfil', (req, res) => res.status(200).json({ image: "https://media.discordapp.net/attachments/796490440429404192/872175099636240435/eu.jpg?width=594&height=594" }))
 
-app.get('/cep/generator', (req, res) => res.status(200).json({ CEP: `1${getRandomInt(1000, 9999)}120` }))
+app.get('/cep/generator', (req, res) => res.status(200).json({ CEP: `013${getRandomInt(10, 60)}000` })) //01310-000
 
 app.get('/', (req, res) => res.json({ msg: "Ola Mundo" }))
 

@@ -16,7 +16,7 @@ app.get('/image/perfil', (req, res) => res.status(200).json({ image: "https://me
 
 app.get('/cep/generator', (req, res) => res.status(200).json({ CEP: `013${getRandomInt(10, 60)}000` })) //01310-000
 
-app.get('/', (req, res) => res.json({ Rota1: "/sobre", Rota2: "/social" , Rota3: "/image/perfil" , Rota4: "/cep/generato" }))
+app.get('/', (req, res) => res.json({ Rota1: "/sobre", Rota2: "/social" , Rota3: "/image/perfil" , Rota4: "/cep/generator" }))
 
 app.listen(port, (req, res) => { console.log("API rodando na porta:" + port) })
 
